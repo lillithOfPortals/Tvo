@@ -1,0 +1,13 @@
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))()
+local Window = OrionLib:MakeWindow({Name = "Old TVO By Lilith", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local MainTab = Window:NewTab("Main")
+local MainSection = MainTab:NewSection("Main")
+
+-- Set IntroText
+Window:MakeLabel({Name = "IntroText", Text = "old tvo by queen lilith"})
+
+-- Button with simplified loadstring code
+MainSection:NewButton("Auto Vervain + No Cd", "Executes the Auto Vervain + No Cd script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/lillithOfPortals/Tvo/main/Old%20Tvo"))()
+end)

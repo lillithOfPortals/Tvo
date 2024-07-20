@@ -32,7 +32,7 @@ MainTab:AddButton({
     Callback = function()
         -- Code to start fire protection
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/lillithOfPortals/Tvo/main/Oh"))()
+game.Players.LocalPlayer.Character.IncendiaOn:destroy()
     end
 })
 
@@ -42,7 +42,7 @@ MainTab:AddButton({
     Callback = function()
         -- Code to start fire protection
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/lillithOfPortals/Tvo/main/Oh"))()
+game.Players.LocalPlayer.Character.Anchored:destroy()
     end
 })
 -- Add a Button for Character Selection

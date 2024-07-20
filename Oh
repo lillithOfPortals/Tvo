@@ -1,2 +1,1 @@
 game.Players.LocalPlayer.Character.IncendiaOn:destroy
-game.Players.LocalPlayer.Character.Anchored:destroy

@@ -28,23 +28,36 @@ MainTab:AddButton({
 
 -- Add a Button for Fire Protection
 MainTab:AddButton({
-    Name = "Fire Protection-1",
+    Name = "Fire Protection",
     Callback = function()
         -- Code to start fire protection
 
-game.Players.LocalPlayer.Character.IncendiaOn:destroy()
+while _G.Melee do
+    wait()
+
+    local success, errMsg = pcall(function()
+        local character = game.Players.LocalPlayer.Character
+        if character then
+            local incendiaOn = character:FindFirstChild("IncendiaOn")
+            local anchored = character:FindFirstChild("Anchored")
+
+            if incendiaOn then
+                incendiaOn:Destroy()
+            end
+
+            if anchored then
+                anchored:Destroy()
+            end
+        end
+    end)
+
+    if not success then
+        warn("Error occurred: " .. errMsg)
+    end
+end
     end
 })
 
--- Add a Button for Fire Protection
-MainTab:AddButton({
-    Name = "Fire Protection-2",
-    Callback = function()
-        -- Code to start fire protection
-
-game.Players.LocalPlayer.Character.Anchored:destroy()
-    end
-})
 -- Add a Button for Character Selection
 MainTab:AddButton({
     Name = "Character Selection",
